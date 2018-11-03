@@ -76,8 +76,15 @@ WSGI_APPLICATION = 'webs.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'webs',
+        'USER': 'root',
+        'PASSWORD': '257313',
+        # 'HOST': '47.92.192.230',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
