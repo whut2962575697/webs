@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from common import views as common_view
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+
+    # common app
+    url(r'^common/get_bmap_boundary$', common_view.get_bmap_boundary),
+    url(r'^common/translate_coord_2_mc$', common_view.translate_coord_2_mc),
+    url(r'^common/download_shp$', common_view.download_shp_file),
+
 ]
