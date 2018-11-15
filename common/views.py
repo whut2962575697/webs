@@ -47,8 +47,8 @@ def download_shp_file(request):
     wkt = wkt.strip(",") + ")"
     print (wkt)
     polygons = arcpy.FromWKT(wkt)
-    if not arcpy.Exists(r'G:\xin.data\spiders_data\divisions_shp'+"\\"+city+".shp"):
-        arcpy.CopyFeatures_management(polygons, r'G:\xin.data\spiders_data\divisions_shp'+"\\"+city+".shp")
+    if not arcpy.Exists(r'G:\xin.data\spiders_data\hbs'+"\\"+city+".shp"):
+        arcpy.CopyFeatures_management(polygons, r'G:\xin.data\spiders_data\hbs'+"\\"+city+".shp")
     result = {
         "status": "0"
     }
